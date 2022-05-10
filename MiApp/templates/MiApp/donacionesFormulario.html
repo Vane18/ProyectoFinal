@@ -1,0 +1,33 @@
+{% extends "MiApp/padre.html" %}
+{% load static %}
+{% block headermodificable %}
+<div class="masthead-heading text-uppercase">DONACIONES</div>
+{% endblock %}
+{% block navmodificable %}
+<li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Volver al inicio</a></li>
+{% endblock %}
+{% block contenidoMastheadCambia %}
+<a class="btn btn-info btn-xl text-uppercase" href="#services">Quiero donar</a>
+{% endblock%}
+{% block NuestroHogar %}
+<div class="container">
+<form action="{% url 'donaciones' %}" method="POST" class="form-group mt-5 col-6">
+    {% csrf_token %}
+    <h2 class="text-center">FORMULARIO DE DONACIÓN</h2>
+    <p>Nombre del donante: <input type="text" name="nombreDonante" id="nombreDonante" class="form-control mb-2" placeholder="Nombre del donante"></p>
+    <p>Apellido del donante: <input type="text" name="apellidoDonante" id="apellidoDonante" class="form-control mb-2" placeholder="Apellido del donante"></p>
+    <p>Valor de la donación: <input type="number" name="valorDonacion" id="valorDonacion" class="form-control mb-2" placeholder="Valor de la donación en pesos"></p>
+    <button type="submit" class="btn btn-info mb-2" >Enviar donación</button>
+    
+</form>
+</div>
+
+
+
+{% endblock %}
+{% block Adopta %}
+{% endblock %}
+{% block Contacto %}
+{% endblock %}
+{% block AdoptaPopup %}
+{% endblock %}

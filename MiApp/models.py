@@ -4,6 +4,8 @@ class Donacion(models.Model):
     nombreDonante = models.CharField(max_length=50)
     apellidoDonante = models.CharField(max_length=50)
     valorDonacion = models.IntegerField()
+    def __str__(self):
+        return f'Nombre: {self.nombreDonante} Apellido: {self.apellidoDonante} Valor: {self.valorDonacion}'
 
 class Adoptante(models.Model):
     nombreAdoptante = models.CharField(max_length=50)

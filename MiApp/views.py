@@ -1,8 +1,9 @@
-from django.shortcuts import render
+
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from MiApp.forms import formularioAdopcion
-from MiApp.models import Adoptante, Animal
+from .forms import *
+from .models import *
 
 def inicio(request):
     return render(request,'MiApp/inicio.html')
@@ -12,18 +13,19 @@ def contacto(request):
 
 def donaciones(request):
     return render(request,'MiApp/donaciones.html')
-    
 def requisitos(request):
+    return render(request,'MiApp/requisitos.html')
+
+def donaciones(request):
     if request.method == 'POST':
-        miFormulario = formularioAdopcion(request.POST)
+        miFormulario = DonacionFormulario(request.POST)
         if miFormulario.is_valid():
             informacion = miFormulario.cleaned_data
-            requisito = Animal(nombreAnimal=informacion['nombreAnimal'],edadAnimal=informacion['nombreAnimal'])
-            requisito.save()
-            return render(request,'MiApp/inicio.html')
+            donacion=Donacion(nombreDonante=informacion['nombreDonante'],apellidoDonante=informacion['apellidoDonante'],valorDonacion=informacion['valorDonacion'])  
+            donacion.save()
+            return render(request, 'MiApp/donaciones.html')
     else:
-        miFormulario=formularioAdopcion()
-    return render(request,'MiApp/requisitos.html', {'formulario':miFormulario})
-
+        miFormulario=DonacionFormulario()
+    return render(request, 'MiApp/donacionesFormulario.html', {'formulario':miFormulario})
 
 
