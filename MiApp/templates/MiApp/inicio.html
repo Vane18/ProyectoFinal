@@ -1,8 +1,15 @@
     {% extends "MiApp/padre.html" %}
     {% load static %}
+    {% block headermodificable %}
+    <div class="masthead-heading text-uppercase">VOS PODES SALVAR UNA VIDA</div>
+    {% endblock %}
+    {% block navmodificable %}
+    <li class="nav-item"><a class="nav-link" href="#services">Nosotros</a></li>
+    <li class="nav-item"><a class="nav-link" href="#portfolio">Adoptá</a></li>
+    {% endblock %}
     {% block contenidoMastheadCambia %}
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Quiero saber más</a>
-    {% endblock%}
+        <a class="btn btn-success btn-xl text-uppercase" href="#services">Quiero saber más</a>
+    {% endblock %}
     {% block NuestroHogar %}
         <section class="page-section" id="services">
             <div class="container">
@@ -152,23 +159,26 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/1.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Olimpo</h2>
+                                    <p class="item-intro text-muted">Gato macho 4 años</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/maggie.jpg' %}" alt="..." width="300px" />
+                                    <p>Olimpo es un gato super amable y compañero. Está listo para encontrar un hogar.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Threads
+                                            <strong>Nombre:</strong>
+                                            Olimpo
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Illustration
+                                            <strong>Edad:</strong>
+                                            4 años
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
+                                    </button>
+                                    <button class= "btn btn-success btn-xl text-uppercase">
+                                        REQUISITOS DE ADOPCIÓN
                                     </button>
                                 </div>
                             </div>
@@ -187,23 +197,26 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/2.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Maggie</h2>
+                                    <p class="item-intro text-muted">Gata hembra 2 años</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/maggie1.jpg' %}" alt="..." width="300px"/>
+                                    <p>Gata cariñosa lista para poder encontrar a su familia ideal.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Explore
+                                            <strong>Nombre:</strong>
+                                            Maggie
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
+                                            <strong>Edad:</strong>
+                                            2 años
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
+                                    </button>
+                                    <button class= "btn btn-success btn-xl text-uppercase">
+                                        REQUISITOS DE ADOPCIÓN
                                     </button>
                                 </div>
                             </div>
@@ -222,23 +235,26 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/3.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Kino</h2>
+                                    <p class="item-intro text-muted">Gatito macho 5 meses</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/kino.jpg' %}" alt="..." width="300px" />
+                                    <p>Hermoso gatito se encuentra en adopción responsable</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Finish
+                                            <strong>Nombre:</strong>
+                                            Kino
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Identity
+                                            <strong>Edad:</strong>
+                                            5 meses
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
+                                    </button>
+                                    <button class= "btn btn-success btn-xl text-uppercase">
+                                        REQUISITOS DE ADOPCIÓN
                                     </button>
                                 </div>
                             </div>
@@ -257,23 +273,26 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/4.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Ornn</h2>
+                                    <p class="item-intro text-muted">Perro macho 8 años</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/ornn.jpg' %}" alt="..." width="300px" />
+                                    <p>Ornn está esperando su hogar ideal con una familia que lo quiera cuidar para siempre.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Lines
+                                            <strong>Nombre:</strong>
+                                            Ornn   
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Branding
+                                            <strong>Edad:</strong>
+                                            8 años
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
+                                    </button>
+                                    <button class= "btn btn-success btn-xl text-uppercase">
+                                        REQUISITOS DE ADOPCIÓN
                                     </button>
                                 </div>
                             </div>
@@ -292,24 +311,27 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/5.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Tuti</h2>
+                                    <p class="item-intro text-muted">Perra hembra 9 meses</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/tuti.jpg' %}" alt="..." width="300px" />
+                                    <p>Tuti es una perrita cariñosa, que espera una buena familia que la cuide.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Southwest
+                                            <strong>Nombre:</strong>
+                                            Tuti
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Website Design
+                                            <strong>Edad:</strong>
+                                            9 meses
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
                                     </button>
+                                    <a class= "btn btn-success btn-xl text-uppercase" href="{% url 'requisitos' %}">
+                                        REQUISITOS DE ADOPCIÓN
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -327,24 +349,28 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/portfolio/6.jpg' %}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Best</h2>
+                                    <p class="item-intro text-muted">Mapache macho 2 años</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'MiApp/assets/img/animales/best.jpg' %}" alt="..." width="300px"/>
+                                    <p>Mapache listo para ser adoptado, por una familia la cual principalmente pueda cumplir con todos los requisitos que solicitamos.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Window
+                                            <strong>Nombre:</strong>
+                                            Best
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Photography
+                                            <strong>Edad:</strong>
+                                            2 años
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <button class="btn btn-success btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Volver atras
                                     </button>
+                                    <button class= "btn btn-success btn-xl text-uppercase">
+                                        REQUISITOS DE ADOPCIÓN
+                                    </button>
+
                                 </div>
                             </div>
                         </div>

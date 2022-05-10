@@ -28,11 +28,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Adoptá</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Donaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Requisitos de adopción</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contactanos</a></li>
+                        {% block navmodificable %}
+                        {% endblock %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'donaciones' %}">Donaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'requisitos' %}">Requisitos de adopción</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contactanos</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -41,7 +42,9 @@
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">¡Bienvenidos al hogar Mundo Animal!</div>
-                <div class="masthead-heading text-uppercase">VOS PODES SALVAR UNA VIDA</div>
+                {% block headermodificable %}
+
+                {% endblock %}
                 {% block contenidoMastheadCambia %}
 
                 {% endblock%}
@@ -62,7 +65,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Mundo Animal 2022</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>

@@ -1,14 +1,19 @@
 {% extends "MiApp/padre.html" %}
 {% load static %}
+{% block headermodificable %}
+<div class="masthead-heading text-uppercase">DONACIONES</div>
+{% endblock %}
+{% block navmodificable %}
+<li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Volver al inicio</a></li>
+{% endblock %}
 {% block contenidoMastheadCambia %}
-<a class="btn btn-primary btn-xl text-uppercase" href="#services">Quiero saber más</a>
+<a class="btn btn-info btn-xl text-uppercase" href="#services">Quiero donar</a>
 {% endblock%}
 {% block NuestroHogar %}
 {% endblock %}
 {% block Adopta %}
 {% endblock %}
 {% block Contacto %}
-       
 {% endblock %}
 {% block AdoptaPopup %}
 {% endblock %}

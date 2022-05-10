@@ -1,3 +1,20 @@
 from django.db import models
 
-# Create your models here.
+class Donacion(models.Model):
+    nombreDonante = models.CharField(max_length=50)
+    apellidoDonante = models.CharField(max_length=50)
+    valorDonacion = models.IntegerField()
+
+class Adoptante(models.Model):
+    nombreAdoptante = models.CharField(max_length=50)
+    apellidoAdoptante = models.CharField(max_length=50)
+
+class Animal(models.Model):
+    nombreAnimal = models.CharField(max_length=50)
+    edadAnimal = models.IntegerField()
+
+class Consulta(models.Model):
+    nombreConsultante = models.CharField(max_length=50)
+    emailConsultante = models.EmailField()
+    telefonoConsultante = models.IntegerField()
+    mensajeConsultante = models.CharField(max_length=350)

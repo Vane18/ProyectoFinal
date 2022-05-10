@@ -1,7 +1,13 @@
 {% extends "MiApp/padre.html" %}
 {% load static %}
+{% block headermodificable %}
+<div class="masthead-heading text-uppercase">CONTACTATE CON NOSOTROS</div>
+{% endblock %}
+{% block navmodificable %}
+<li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Volver al inicio</a></li>
+{% endblock %}
 {% block contenidoMastheadCambia %}
-<a class="btn btn-primary btn-xl text-uppercase" href="#">Quiero contactarme</a>
+<a class="btn btn-warning btn-xl text-uppercase" href="#">Quiero contactarme</a>
 {% endblock%}
 {% block NuestroHogar %}
 {% endblock %}
@@ -11,8 +17,8 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Contactate con nosotros</h2>
+            <h3 class="section-subheading text-muted">Aquí un formulario para que puedas dejarnos tus consultas...</h3>
         </div>
         <!-- * * * * * * * * * * * * * * *-->
         <!-- * * SB Forms Contact Form * *-->
