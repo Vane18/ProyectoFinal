@@ -27,3 +27,6 @@ class Consulta(models.Model):
     emailConsultante = models.EmailField()
     telefonoConsultante = models.IntegerField()
     mensajeConsultante = models.CharField(max_length=350)
+    def __str__(self):
+        return f'Nombre: {self.nombreConsultante} Email: {self.emailConsultante} Mensaje: {self.mensajeConsultante}'
+    
