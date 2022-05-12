@@ -36,11 +36,22 @@
                 </li>
             </ul>
         </div>
+        <div>
+            <div class="container">
+                <h1 style="color:white">Búsqueda de animales disponibles para adoptar</h1>
+                <form action="{% url 'busqueda' %}" method="GET" class="form-group mt-5 col-6">
+                <select name="tipoAnimal" id="animal" class="form-select">
+                    <option selected>Seleccione el tipo de animal que quiere buscar</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Mapache">Mapache</option>
+                  </select>
+                  <br>
+                  <div class="text-center"><button type="submit" class="btn btn-info mb-2" >Buscar</button></div>
+                </form>
 {% endblock %}
 {% block Adopta %}
 
 {% endblock %}
 {% block Contacto %}
-{% endblock %}
-{% block AdoptaPopup %}
 {% endblock %}

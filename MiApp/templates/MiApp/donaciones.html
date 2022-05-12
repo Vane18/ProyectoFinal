@@ -1,7 +1,8 @@
 {% extends "MiApp/padre.html" %}
 {% load static %}
 {% block headermodificable %}
-<div class="masthead-heading text-uppercase">DONACIONES</div>
+<div class="masthead-heading text-uppercase">MUCHAS GRACIAS POR DONAR</div>
+<a class="btn btn-info btn-xl text-uppercase" href="{% url 'donaciones' %}">Volver a la página anterior</a>
 {% endblock %}
 {% block navmodificable %}
 <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Volver al inicio</a></li>
@@ -9,12 +10,15 @@
 {% block contenidoMastheadCambia %}
 {% endblock%}
 {% block NuestroHogar %}
-<h2 style="color:red">MUCHAS GRACIAS POR SU DONACIÓN</h2>
-<a class="btn btn-info btn-xl text-uppercase" href="{% url 'donaciones' %}">Volver a la página anterior</a>
+
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+    <h2 style="color:red">MUCHAS GRACIAS POR SU DONACIÓN</h2>
+    <img src="{% static 'MiApp/assets/img/infraganti.png' %}" alt="best-mapache">
+    </div>
+</section>
 {% endblock %}
 {% block Adopta %}
 {% endblock %}
 {% block Contacto %}
-{% endblock %}
-{% block AdoptaPopup %}
 {% endblock %}

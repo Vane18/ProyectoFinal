@@ -1,0 +1,79 @@
+    {% extends "MiApp/padre.html" %}
+    {% load static %}
+    {% block headermodificable %}
+    <div class="masthead-heading text-uppercase">VOS PODES SALVAR UNA VIDA</div>
+    {% endblock %}
+    {% block navmodificable %}
+    <li class="nav-item"><a class="nav-link" href="#services">Nosotros</a></li>
+    <li class="nav-item"><a class="nav-link" href="#portfolio">Adoptá</a></li>
+    {% endblock %}
+    {% block contenidoMastheadCambia %}
+        <a class="btn btn-success btn-xl text-uppercase" href="#services">Quiero saber más</a>
+    {% endblock %}
+    {% block NuestroHogar %}
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">NUESTRO HOGAR</h2>
+                    <h3 class="section-subheading text-muted">En nuestro hogar tenemos muchos animales a los que podes salvarle la vida...</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-6x">
+                            <img src="{% static 'MiApp/assets/img/animales/gato.jpg' %}" alt="" width="130px" height="auto">
+                        </span>
+                        <h4 class="my-3">Gatos</h4>
+                        <p class="text-muted">En nuestro hogar tenemos más de 200 gatos que están buscando una familia que los pueda amar y puedan brindarle lo mejor. Los gatos del hogar han sido rescatados en distintas circunstancias, algunas muy extremas, pero todos reciben los mejores cuidados para que se encuentren aptos para ser adoptados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-6x">
+                            <img src="{% static 'MiApp/assets/img/animales/perro.jpg' %}" alt="" width="130px" height="auto">
+                        </span>
+                        <h4 class="my-3">Perros</h4>
+                        <p class="text-muted">Actualmente nos encontramos con alrededor de 140 perros esperando poder encontrar su familia ideal, todos han pasado por excelentes veterinarios que les brindaron los mejores cuidados, aunque algunos aún continúan con cuidados para en algún momento estar listos para ser adoptados. Al igual que los gatos, todos los perros han sido rescatados de distintas circunstancias como abandono o maltrato ,pero ya están listos para ser adoptados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-6x">
+                            <img src="{% static 'MiApp/assets/img/animales/mapache.jpg' %}" alt="" width="300px" height="auto">
+                        </span>
+                        <h4 class="my-3">Mapaches</h4>
+                        <p class="text-muted">Si bien tenemos gatos y perros en adopción, también nos dedicamos a poder rehabilitar mapaches que se encuentren heridos y que solo pueden vivir en cautiverio, para eso les otorgamos todos los cuidados necesarios y luego una familia que cumpla con todos los requisitos necesarios podrá adoptar una de estas bellas criaturas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+    {% block Adopta %}
+       <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="section-heading text-uppercase">ADOPTÁ</h1>
+                    <h3 class="section-subheading">Para poder realizar la adopción de un gato, perro o mapache primero se debe llenar el formulario de pre-adopción con el fin de notificarle cual de nuestros animales disponibles para adopción se adapta mejor a su familia. Tenga en cuenta que debe tener ciertos requisitos, los mismos los puede consultar <a href="{% url 'requisitos' %}">aquí</a></h3>
+                </div>
+            </div>
+            <div class="container">
+                <form action="{% url 'inicio' %}" method="POST" class="form-group mt-5 col-6">
+                    {% csrf_token %}
+                    <h2 class="text-center">FORMULARIO DE PREADOPCIÓN</h2>
+                    <p>Nombre del adoptante: <input type="text" name="nombreAdoptante" id="nombreAdoptante" class="form-control mb-2" placeholder="Nombre del adoptante"></p>
+                   <p>Apellido del adoptante: <input type="text" name="apellidoAdoptante" id="apellidoAdoptante" class="form-control mb-2" placeholder="Apellido del adoptante"></p>
+                    <p>Tipo de animal de preferencia: <br>
+                        <select name="preferenciaAnimal" id="preferenciaAnimal" class="form-select">
+                            <option selected>Seleccione el tipo de animal de su preferencia</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Mapache">Mapache</option>
+                          </select>
+                    <p>Email del adoptante: <input type="email" name="emailAdoptante" id="emailAdoptante" class="form-control mb-2" placeholder="Email del adoptante"></p>
+                    <div class="text-center"><button type="submit" class="btn btn-info mb-2" >Enviar formulario</button></div>
+                    
+                </form>
+                </div>
+                <br>
+                <br>
+        </section>
+
+    {% endblock %}
+    {% block Contacto %}
+       
+    {% endblock %}

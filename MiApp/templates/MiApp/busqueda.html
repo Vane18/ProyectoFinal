@@ -1,0 +1,45 @@
+    {% extends "MiApp/padre.html" %}
+    {% load static %}
+    {% block headermodificable %}
+    <div class="masthead-heading text-uppercase">Resultados de búsqueda</div>
+    {% endblock %}
+    {% block navmodificable %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Inicio</a></li>
+    {% endblock %}
+    {% block contenidoMastheadCambia %}
+        <a class="btn btn-success btn-xl text-uppercase" href="{% url 'requisitos' %}">Volver a la página anterior</a>
+    {% endblock %}
+    {% block NuestroHogar %}
+    {% endblock %}
+    {% block Adopta %}
+    {% if animales %}
+    <h3>Los animales listos para adoptar del tipo {{animal}} son los siguientes:</h3>
+    <table class="table table-bordered ext-center">
+        <thead class="bg-success text-light">
+            <tr>
+                <td>Nombre del animal</td>
+                <td>Edad del animal (años)</td>
+                <td>Tipo Animal</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animales %}
+                <tr>
+                    <td>{{animal.nombreAnimal}}</td>
+                    <td>{{animal.edadAnimal}}</td>
+                    <td>{{animal.tipoAnimal}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <a class="btn btn-info btn-xl text-uppercase" href="/#portfolio">Quiero llenar el formulario de preadopción</a>
+    </div>
+    {% else %}
+    <h2 style="color:red">No se encontraron animales listos para adoptar de ese tipo</h2>
+    {% endif %}
+
+    {% endblock %}
+    {% block Contacto %}
+       
+    {% endblock %}
